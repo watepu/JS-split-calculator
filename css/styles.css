@@ -29,3 +29,23 @@ body{
 #unit{
   width: 110px;
 }
+
+#btn{
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 110px;
+  height: 40px;
+  padding: 10px;
+  background: #4169e1;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+}
+
+.input-area{
+  font-size: 0;
+  /* htmlファイルで改行した分の空白を削除するために設定 */
+  margin-bottom: 20px;
+}
