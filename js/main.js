@@ -8,12 +8,20 @@
   const result = document.getElementById('result');
   const reset = document.getElementById('reset');
 
+  function checkInput(){
+    
+  }
+
   btn.addEventListener('click', function(){
     const payLess = Math.floor(price.value / num.value /unit.value) * unit.value;
     const short = price.value - (payLess * num.value);
     const payMore = Math.ceil(price.value / num.value /unit.value) * unit.value;
     const over = Math.abs(price.value - (payMore * num.value));
     let str;
+    if(this.classList.contains('disabled') === true){
+      // もしこのボタンにdisabledが含まれていたら・・・
+      return;
+    }
 
     if(over === 0 && short === 0){
       str = '一人' + (price.value / num.value) + '円です。';
@@ -30,7 +38,9 @@
     // '一人' + payLess + '円だと' + short + '円足りません。　' +
     // '一人' + payMore + '円だと' + over + '円余ります。'
     result.textContent = str;
-
   });
+
+  price.addEventListener('keyup', chackInput)
+  num.addEventListener('keyup', chackInput)
 
 }

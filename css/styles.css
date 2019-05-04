@@ -69,3 +69,8 @@ body{
   bottom: 10px;
   right: 10px;
 }
+
+/* ボタンを押せない時のクラスを先に作っておく */
+#btn.disabled{
+  opacity: 0.5;
+}
