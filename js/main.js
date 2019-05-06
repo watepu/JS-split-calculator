@@ -9,7 +9,15 @@
   const reset = document.getElementById('reset');
 
   function checkInput(){
-    
+    if(
+      price.value.match(/^[1-9][0-9]*$/) !== null &&
+      num.value.match(/^[1-9][0-9]*$/) !== null
+      // 正規表現を使って一桁目は1-9、2桁目以降は0-9のどれかが入力されており、nullでなければ
+    ){
+      btn.classList.remove('disabled');
+    }else{
+      btn.classList.add('disabled');
+    }
   }
 
   btn.addEventListener('click', function(){
@@ -40,7 +48,7 @@
     result.textContent = str;
   });
 
-  price.addEventListener('keyup', chackInput)
-  num.addEventListener('keyup', chackInput)
+  price.addEventListener('keyup', checkInput)
+  num.addEventListener('keyup', checkInput)
 
 }
