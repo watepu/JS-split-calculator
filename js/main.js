@@ -45,4 +45,13 @@
   price.addEventListener('keyup', checkInput)
   num.addEventListener('keyup', checkInput)
 
+  reset.addEventListener('click', function(){
+    result.textContent = 'ここに結果を表示';
+    price.value = '';
+    num.value = '';
+    unit.value = 100;
+    btn.classList.add('disabled');
+    this.classList.add('hidden');
+  })
+
 }
