@@ -52,6 +52,8 @@
     unit.value = 100;
     btn.classList.add('disabled');
     this.classList.add('hidden');
+    price.focus();
   })
+  price.focus();
 
 }
